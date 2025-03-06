@@ -315,5 +315,63 @@
                 ]
             }
         ]
+
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+    "height": 53,
+    "width": 254,
+    "hideSelection": false,
+    "fillHorizontally": true,
+    "formatter": {
+        "elmType": "div",
+        "attributes": {
+            "class": "sp-card-container"
+        },
+        "children": [
+            {
+                "elmType": "div",
+                "attributes": {}
+            },
+            {
+                "elmType": "div",
+                "attributes": {
+                    "class": "ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer"
+                },
+                "style": {
+                    "border": "1px solid #e1dfdd",
+                    "box-shadow": "=if(@isSelected, '0 0 5px #0078d4', 'none')",
+                    "transition": "box-shadow 0.3s"
+                },
+                "children": [
+                    {
+                        "elmType": "div",
+                        "attributes": {
+                            "class": "sp-card-lastTextColumnContainer"
+                        },
+                        "children": [
+                            {
+                                "elmType": "a",
+                                "attributes": {
+                                    "title": "[$test]",
+                                    "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-urlContent sp-card-highlightedContent sp-card-keyboard-focusable",
+                                    "href": "[$test]",
+                                    "target": "=if ([$test] == '', '', '_blank')",
+                                    "role": "heading",
+                                    "aria-level": "3"
+                                },
+                                "style": {
+                                    "pointer-events": "=if ([$test] == '', 'none', 'auto')",
+                                    "text-decoration": "=if ([$test] == '', 'none', 'auto')"
+                                },
+                                "txtContent": "=if ([$test.desc] == '', '–', [$test.desc])"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
     }
 }
