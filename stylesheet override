@@ -1,0 +1,31 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "cursor": "pointer",
+        "background-color": "=if(@currentField=='Value','#f3f2f1','#ffffff')",
+        "border": "1px solid #e1dfdd",
+        "padding": "10px",
+        "margin": "5px",
+        "border-radius": "5px",
+        "transition": "background-color 0.3s, border-color 0.3s"
+    },
+    "attributes": {
+        "class": "custom-tile",
+        "onmouseover": "this.style.borderColor='#0078d4'",
+        "onmouseout": "this.style.borderColor='#e1dfdd'"
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "font-weight": "bold"
+            },
+            "txtContent": "=[$Title]"
+        }
+    ],
+    "customRowAction": {
+        "action": "navigateTo",
+        "actionParams": "=[$Link]"
+    }
+}
